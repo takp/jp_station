@@ -6,21 +6,13 @@ require 'jp_station/version'
 Gem::Specification.new do |spec|
   spec.name          = "jp_station"
   spec.version       = JpStation::VERSION
-  spec.authors       = ["takp"]
+  spec.authors       = ["Takayoshi Nishida"]
   spec.email         = ["takayoshi.nishida@gmail.com"]
 
-  spec.summary       = %q{Get the near station data from latitude and longitude using api http://map.simpleapi.net/.}
-  spec.description   = %q{Get the near station data from latitude and longitude using api http://map.simpleapi.net/.}
+  spec.summary       = %q{Get the stations near the place in Japan.}
+  spec.description   = %q{Get the stations near the place in Japan.}
   spec.homepage      = "https://github.com/takp/jp_station"
   spec.license       = "MIT"
-
-  # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
-  # delete this section to allow pushing this gem to any host.
-  if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
-  else
-    raise "RubyGems 2.0 or newer is required to protect against public gem pushes."
-  end
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = "exe"
