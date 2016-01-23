@@ -1,6 +1,7 @@
 # JpStation
 
-JpStation helps you to get the near station data from latitude and longitude using api. ( http://map.simpleapi.net/ ) Now the response data is only in Japanese.
+JpStation helps you to get the near station data from latitude and longitude using api. ( http://map.simpleapi.net/ ) 
+The response data is only in Japanese.
 
 ## Installation
 
@@ -27,12 +28,30 @@ lat, lng = ["34.673150", "135.501005"]
 response = JpStation::Simpleapi.stations(lat, lng)
 ```
 
-the response is Hash object.
+The response is Hash object.
 
 ```ruby
 response[:count] # => 8
 response[:stations].length # => 8
 response[:stations].first[:name] # => "心斎橋駅"
+```
+
+The response data is like this.
+
+```ruby
+{:count=>8,
+ :stations=>
+  [{:name=>"心斎橋駅",
+    :furigana=>"しんさいばしえき",
+    :line=>"大阪市営御堂筋線ほか",
+    :city=>"大阪市中央区",
+    :prefecture=>"大阪府",
+    :direction=>"北西",
+    :directionReverse=>"南東",
+    :distance=>"150",
+    :distanceM=>"150m",
+    :distanceKm=>"0.2km",
+    :traveltime=>"徒歩2分以上"},
 ```
 
 ## Station API Services
