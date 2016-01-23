@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Get the near station data from latitude and longitude using api http://map.simpleapi.net/.}
   spec.description   = %q{Get the near station data from latitude and longitude using api http://map.simpleapi.net/.}
-  spec.homepage      = "http://example.com"
+  spec.homepage      = "https://github.com/takp/jp_station"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or

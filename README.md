@@ -35,6 +35,12 @@ response[:stations].length # => 8
 response[:stations].first[:name] # => "心斎橋駅"
 ```
 
+## Station API Services
+
+This gem use the api service.
+
+About api services (Japanese) : http://map.simpleapi.net/
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
