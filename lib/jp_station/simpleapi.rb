@@ -30,18 +30,22 @@ module JpStation
 
         def station_hash(station)
           {
-            :name             => station.elements["name"].text,
-            :furigana         => station.elements["furigana"].text,
-            :line             => station.elements["line"].text,
-            :city             => station.elements["city"].text,
-            :prefecture       => station.elements["prefecture"].text,
-            :direction        => station.elements["direction"].text,
-            :directionReverse => station.elements["directionReverse"].text,
-            :distance         => station.elements["distance"].text,
-            :distanceM        => station.elements["distanceM"].text,
-            :distanceKm       => station.elements["distanceKm"].text,
-            :traveltime       => station.elements["traveltime"].text
+            :name             => blank_if_nil( station.elements["name"] ),
+            :furigana         => blank_if_nil( station.elements["furigana"] ),
+            :line             => blank_if_nil( station.elements["line"] ),
+            :city             => blank_if_nil( station.elements["city"] ),
+            :prefecture       => blank_if_nil( station.elements["prefecture"] ),
+            :direction        => blank_if_nil( station.elements["direction"] ),
+            :directionReverse => blank_if_nil( station.elements["directionReverse"] ),
+            :distance         => blank_if_nil( station.elements["distance"] ),
+            :distanceM        => blank_if_nil( station.elements["distanceM"] ),
+            :distanceKm       => blank_if_nil( station.elements["distanceKm"] ),
+            :traveltime       => blank_if_nil( station.elements["traveltime"] )
           }
+        end
+
+        def blank_if_nil(element)
+          element ? element.text : ""
         end
     end
   end
